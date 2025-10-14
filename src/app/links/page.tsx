@@ -178,6 +178,21 @@ export default function LinksPage() {
 
         /* Mini-cards sin bordes ni sombra (el color lo daremos inline) */
         .mini-card { border: none; box-shadow: none; }
+          .mini-green {
+    border: none;
+    box-shadow: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #e9f7f5 0%, #c1ebe0 100%);
+  }
+  .mini-green.alt {
+    background: linear-gradient(135deg, #c1ebe0 0%, #b2e6d8 100%);
+  }
+  .mini-title {
+    display:flex; align-items:center; gap:.5rem;
+    font-weight:600; font-size:0.95rem;
+  }
+  .mini-copy { font-size:.9rem; opacity:.9; margin-top:.35rem; }
       `}</style>
 
       {/* JSON-LD básico para SEO */}
@@ -236,34 +251,38 @@ export default function LinksPage() {
       </section>
 
       {/* Sección nicho: DBT + crianza (3 mini-cards de color sólido) */}
-      <section className="mx-auto mt-2 max-w-md px-6">
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-          <div className="mini-card rounded-2xl p-4" style={{ backgroundColor: BRAND_COLORS.primaryLight }}>
-            <div className="mb-2 flex items-center gap-2 text-sm font-semibold">
-              {IconHeartBrain(20)} Regulación emocional
-            </div>
-            <p className="text-xs opacity-90">
-              Validación + mindfulness para responder, no reaccionar.
-            </p>
-          </div>
-          <div className="mini-card rounded-2xl p-4" style={{ backgroundColor: BRAND_COLORS.secondaryLight }}>
-            <div className="mb-2 flex items-center gap-2 text-sm font-semibold">
-              {IconFamily(20)} Límites sin culpa
-            </div>
-            <p className="text-xs opacity-90">
-              Dialéctica: firmeza y calidez a la vez, con guías claras.
-            </p>
-          </div>
-          <div className="mini-card rounded-2xl p-4" style={{ backgroundColor: BRAND_COLORS.secondaryMedium }}>
-            <div className="mb-2 flex items-center gap-2 text-sm font-semibold">
-              {IconBaby(20)} Maternidad realista
-            </div>
-            <p className="text-xs opacity-90">
-              Expectativas humanas, autocuidado y planes para crisis.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Sección nicho: DBT + crianza (3 mini-cards verdizas) */}
+<section className="mx-auto mt-2 max-w-md px-6">
+  <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+    <div className="mini-green">
+      <div className="mini-title">
+        {IconHeartBrain(20)} Regulación emocional
+      </div>
+      <p className="mini-copy">
+        Validación + mindfulness para responder, no reaccionar.
+      </p>
+    </div>
+
+    <div className="mini-green alt">
+      <div className="mini-title">
+        {IconFamily(20)} Límites sin culpa
+      </div>
+      <p className="mini-copy">
+        Dialéctica: firmeza y calidez a la vez, con guías claras.
+      </p>
+    </div>
+
+    <div className="mini-green">
+      <div className="mini-title">
+        {IconBaby(20)} Maternidad realista
+      </div>
+      <p className="mini-copy">
+        Expectativas humanas, autocuidado y planes para crisis.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Marquee testimonios */}
       <section className="mt-6 overflow-hidden bg-[var(--color-secondary-light)] py-2">
