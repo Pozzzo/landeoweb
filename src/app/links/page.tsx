@@ -10,7 +10,8 @@ export const metadata = {
 
 // --- Paleta de marca ---
 const BRAND_COLORS = {
-
+  primaryLight: "#ffd6ed",    // rosa pastel
+  primaryMedium: "#efbecd",   // rosa medio
   secondaryLight: "#e5f0f1",  // celeste claro
   secondaryMedium: "#c1ebe0", // menta
   textContrast: "#000000",
